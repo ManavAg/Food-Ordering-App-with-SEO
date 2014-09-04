@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- METAS -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta property="og:title" content="Delicious recipes and fresh ingredients delivered"/>
+        <meta property="og:type" content="product"/>
+        <meta property="og:image" content="http://static.hellofresh.de/images/hellofresh-logo.png"/>
+        <meta property="og:description" content="HelloFresh delivers great recipes and fresh ingredients to your doorstep each week. Cook quick and healthy meals designed by nutritionists and chefs."/>
+        <meta name="description" content="HelloFresh delivers great recipes and fresh ingredients to your doorstep each week. Cook quick and healthy meals designed by nutritionists and chefs." />
+        <meta name="keywords" content="cooking, HelloFresh, great recipes, fresh ingredients, Bio, cookbox, cook box, delivery food, home delivery, Freshbox, Fresh Box, try new recipes, healthy cooking, fresh, quick recipe" />
+        <meta name="robots" content="index,follow" />
+        
+		<!-- LINKS -->
+		<link rel="icon" href="http://static.hellofresh.de/images/intfood/icons/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="data.js"></script>
+		<script src="main.js"></script>
+		
+		<title>HelloFresh</title>
+	</head>
+	<body>
+		<img 
+			src = "HF_Banner.jpg" 
+			id = "banner"
+			alt = "banner" />
+		
+		<!-- Fork Image -->
+		<div 
+			class = "cutlery col-md-1 col-xs-2" 
+			id = "fork"></div>
+
+		<!-- Main Carousel -->
+		<div 
+			class = "col-md-5 col-xs-12" 
+			id = "food">
+			<div 
+				id="carousel" 
+				class="carousel slide" 
+				data-ride="carousel" 
+				data-interval="3000">
+				<!-- Indicators -->
+				<ol 
+					class="carousel-indicators" 
+					id = "indicators">
+				</ol>
+				<!-- Wrapper for slides -->
+				<div 
+					class="carousel-inner" 
+					id = "innerContent">
+				</div>
+				<!-- Controls -->
+				<a 
+					class="left carousel-control" 
+					href="#carousel" 
+					role="button" 
+					data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a 
+					class="right carousel-control" 
+					href="#carousel" 
+					role="button" 
+					data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+		
+		<!-- Knife Image -->
+		<div 
+			class = "cutlery col-md-1 col-xs-2" 
+			id = "knife">
+		</div>
+		
+		<!-- Login and Register Forms -->
+		<div 
+			class = "col-md-5 col-xs-12" 
+			id = "forms">
+		
+			<!-- Nav tabs -->
+			<ul 
+				class="nav nav-tabs" 
+				role="tablist">
+				<li class="active">
+					<a 
+						href="#login" 
+						role = "tab" 
+						data-toggle = "tab">
+						Login
+					</a>
+				</li>
+				<li>
+					<a 
+						href="#register" 
+						role="tab" 
+						data-toggle="tab">
+						Register
+					</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				
+				<!-- Login Form -->
+				<div 
+					class="tab-pane active" 
+					id="login">
+					<br/>
+					<form 
+						class="form-horizontal" 
+						role="form" 
+						action="http://hellofresh.de/user/checkuser" 
+						method="post">
+						
+						<div class="form-group">
+							<label 
+								for="inputEmail" 
+								class="col-md-4 col-xs-12 control-label">
+								Email
+							</label>
+							<div class="col-md-8 col-xs-12">
+								<input 
+									type="email" 
+									class="form-control" 
+									id="inputEmail" 
+									placeholder="Email" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label 
+								for="inputPassword" 
+								class="col-md-4 col-xs-12 control-label">
+								Password
+							</label>
+							<div class="col-md-8 col-xs-12">
+								<input 
+									type = "password" 
+									class="form-control" 
+									id="inputPassword" 
+									placeholder="Password" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-4 col-md-10 col-xs-12">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox">
+											Remember me
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-4 col-md-5 col-xs-12">
+								<button 
+									type="submit" 
+									class="btn btn-primary">
+									Sign in
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				
+				<!-- Registration Form -->
+				<div class="tab-pane" id="register"><br/>
+					<form 
+						class="form-horizontal" 
+						role="form" 
+						action="http://hellofresh.de/user/adduser" 
+						method="post">
+						
+						<div class="form-group">
+							<label 
+								for="inputNewEmail" 
+								class="col-md-5 col-xs-12 control-label">
+								Email
+							</label>
+							<div class="col-md-7 col-xs-12">
+								<input 
+									type="email" 
+									class="form-control" 
+									id="inputNewEmail" 
+									placeholder="Email" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label 
+								for="inputNewPassword" 
+								class="col-md-5 col-xs-12 control-label">
+								Password 
+								<br/><i>min 5 chars</i>
+							</label>
+							
+							<div class="col-md-7 col-xs-12">
+								<input 
+									pattern=".{5,100}" 
+									type="password" 
+									class="form-control" 
+									id="inputNewPassword" 
+									placeholder="Password" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label 
+								for="inputRepeatPassword" 
+								class="col-md-5 col-xs-12 control-label">
+								Repeat Password
+							</label>
+							<div class="col-md-7 col-xs-12">
+								<input 
+									pattern=".{5,100}" 
+									type="password" 
+									class="form-control" 
+									id="inputRepeatPassword" 
+									placeholder="Repeat Password" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label 
+								for="inputBirthdate" 
+								class="col-md-5 col-xs-6 control-label">
+								Birth Date
+							</label>
+							<div class="col-md-7 col-xs-6">
+								<input 
+									type="date" 
+									class="form-control" 
+									id="inputBirthdate" 
+									required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-5 col-md-5 col-xs-12">
+								<button 
+									type="submit" 
+									class="btn btn-primary">
+									Register
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<div id = "loginButton" class = "footer"></div>
+
+		<!-- Food Data Modal -->
+		<div class="modal fade" id = "foodModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div id = "modalImage"></div>
+						<div id = "modalTitle"></div>
+					</div>
+				  
+					<div class="modal-body">
+						<!-- Ratings and Difficulty -->
+						<div id = "ratings">
+							<table class ="table table-bordered">
+								<tr>
+									<td>Rating : </td>
+									<td id = "rating">None</td>
+									<td>Difficulty</td>
+									<td id = "difficulty">None</td>
+								</tr>
+							</table>
+						</div>	
+						<!-- Food Description -->
+						<div id = "description"></div>
+						<br/>
+						<!-- Food Facts -->
+						<div id = "factSheet">
+							<table class ="table table-bordered">
+								<thead>
+									<tr id = "factHead">
+										<td></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr id = "factData">
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>	
+						<!-- Ingredients Accordion -->
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+								<div 
+									class="panel-heading"  
+									data-toggle="collapse" 
+									data-parent="#accordion" 
+									href="#collapseOne">
+									<h4 class="panel-title">Ingredients</h4>
+								</div>
+								<div 
+									id="collapseOne" 
+									class="panel-collapse collapse">
+									<div 
+										class="panel-body" 
+										id="ingredients">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div>
+							<button 
+								type="button" 
+								class="btn btn-primary"
+								data-dismiss="modal">
+								Order Now
+							</button>
+							<button 
+								type="button" 
+								class="btn btn-danger" 
+								data-dismiss="modal">
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Login Data Modal -->
+		<div class="modal fade" id = "loginModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" id = "loginModalBody"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
