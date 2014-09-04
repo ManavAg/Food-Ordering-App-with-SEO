@@ -6,8 +6,8 @@ index.html loads the JS and CSS files as well as data from data.js. It is mainly
 
 Main.js file helps in dynamic loading of content on HTML page index.html using the JSON data. 
 
-#Func1 : It populates the left side carousel of the page and its corresponding modal (openModal function). It uses 2 variables (content and indicators) which correspond to the HTML code for Carousel and its side indicators.
+Func1 : It populates the left side carousel of the page and its corresponding modal (openModal function). It uses 2 variables (content and indicators) which correspond to the HTML code for Carousel and its side indicators.
 
-#Func2 : It checks for password mismatch in registration form, in case the "password field" and "repeat password" field are not entered equal by the user.
+Func2 : It checks for password mismatch in registration form, in case the "password field" and "repeat password" field are not entered equal by the user.
 
-#Func3 : It rearranges the HTML coding for a better optimized view on a mobile device. Mainly, it removes the right side of webpage, and places the login/registration forms in a modal.
+Func3 : It rearranges the HTML coding for a better optimized view on a mobile device. Mainly, it removes the right side of webpage, and places the login/registration forms in a modal.
